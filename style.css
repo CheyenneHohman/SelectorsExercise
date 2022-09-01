@@ -34,11 +34,11 @@ input[type=text] {
     border: 3px dashed #0000ff;
 }
 
-div p {
+div > p {
     font-size: 30px;
 }
 
-input:focus[type=email]{
+input[type=email]{
     background-color: #808080;
 }
 
@@ -50,6 +50,17 @@ div:nth-of-type(3) p:nth-of-type(2) {
     border: 7px solid rgb(255, 255, 255);
 }
 
+/* OTHER WAYS OF DOING THIS 
+
+:nth-child(5) :nth-child(3) {
+    border: 7px solid white;
+ }
+ 
+ div ~ :nth-of-type(odd) > p ~ p {
+    border: 7px solid white;
+ }
+ */
+
 div:nth-of-type(3) em {
     color: seashell; 
     font-size: 25px;
@@ -57,7 +68,17 @@ div:nth-of-type(3) em {
 
 /* BONUS */
 
-li, input[checkbox=checked] {
+/* li, input[checkbox=checked] { */
+    /* margin-left: 40px; 
+} WRONG ^^
+    
+    Or 
+    CORRECT
+    :checked {
+        margin-left: 40px; 
+    }*/
+
+input:checked {
     margin-left: 40px;
 }
 
@@ -76,4 +97,4 @@ h1:hover {
 
 a:visited {
     color: silver;
-}
+} 
